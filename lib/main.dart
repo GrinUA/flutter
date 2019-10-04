@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uvarov_demo/screens/homeScreen.dart';
+import 'package:uvarov_demo/screens/home_screen.dart';
 
 void main() => runApp(MyApp());
 

@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
               icon: Icon(Icons.home), title: Text('ColorFul')),
           BottomNavigationBarItem(
-              icon: Icon(Icons.search), title: Text('Git finder'))
+              icon: Icon(Icons.search), title: Text('Git Finder'))
         ],
       ),
     );

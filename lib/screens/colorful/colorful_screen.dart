@@ -37,6 +37,6 @@ class _ColorfulScreenState extends State<ColorfulScreen> {
   Color getRandomColor() {
     var random = math.Random();
     return Color.fromRGBO(
-        random.nextInt(255), random.nextInt(255), random.nextInt(255), 1.0);
+        random.nextInt(256), random.nextInt(256), random.nextInt(256), 1.0);
   }
 }

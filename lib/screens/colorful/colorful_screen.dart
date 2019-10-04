@@ -25,13 +25,9 @@ class _ColorfulScreenState extends State<ColorfulScreen> {
                 child: Text('Hey there'),
               ),
             ),
-            onTap: () => setBackgroundColor(getRandomColor())));
-  }
-
-  void setBackgroundColor(Color color) {
-    setState(() {
-      backgroundColor = color;
-    });
+            onTap: () => setState(() {
+                  backgroundColor = getRandomColor();
+                })));
   }
 
   Color getRandomColor() {

@@ -86,7 +86,7 @@ class _GithubScreenState extends State<GithubScreen> {
                     ],
                   );
               }
-              return null;
+              return Container();
             },
           ),
         ],

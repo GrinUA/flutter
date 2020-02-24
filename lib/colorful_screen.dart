@@ -71,7 +71,7 @@ class _ColorfulScreenState extends State<ColorfulScreen> {
   String generateText(int length) {
     String string = '';
     int shift = 32;
-    int lastCharacter = 127;
+    int lastCharacter = 128;
     for (int i = 0; i < length; i++) {
       string = String.fromCharCodes(charCodes(length, shift, lastCharacter));
     }

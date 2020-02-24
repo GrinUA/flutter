@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'dart:math' as math;
+
+import 'package:flutter/material.dart';
 
 class ColorfulScreen extends StatefulWidget {
   @override
@@ -7,36 +8,49 @@ class ColorfulScreen extends StatefulWidget {
 }
 
 class _ColorfulScreenState extends State<ColorfulScreen> {
-  Color backgroundColor;
-  Color textColor;
+  final String string = 'Hi There!';
+  Color _backgroundColor;
+  Color _textColor;
+  List<Text> _letters;
 
   @override
   void initState() {
     super.initState();
-    backgroundColor = getRandomColor();
-    textColor = getRandomColor();
+    _letters = _getTextsFromString(string);
+    _backgroundColor = getRandomColor();
+    _textColor = getRandomColor();
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
         child: Container(
-          decoration: BoxDecoration(color: backgroundColor),
+          decoration: BoxDecoration(color: _backgroundColor),
           child: Center(
-            child: Text(
-              'Hey there',
-              style:
-                  TextStyle(color: textColor, decoration: TextDecoration.none),
+            child: Row(
+              children: _letters,
             ),
           ),
         ),
         onTap: () => changeColors());
   }
 
+  _getTextsFromString(String row) {
+    List<Text> letters = [];
+    for (int i = 0; i < row.length; i++) {
+      letters.add(Text(
+        row[i],
+        style: TextStyle(color: getRandomColor()),
+      ));
+    }
+    return letters;
+  }
+
   void changeColors() {
     setState(() {
-      backgroundColor = getRandomColor();
-      textColor = getRandomColor();
+      _backgroundColor = getRandomColor();
+      _textColor = getRandomColor();
+      _letters = _getTextsFromString(string);
     });
   }
 

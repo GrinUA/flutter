@@ -55,7 +55,7 @@ class _ColorfulScreenState extends State<ColorfulScreen> {
     setState(() {
       backgroundColor = getRandomColor();
       textColor = getRandomColor();
-      string = generateTextEasyWay(stringLength);
+      string = generateText(stringLength);
       letters = _getTextsFromString(string);
     });
   }
@@ -66,7 +66,7 @@ class _ColorfulScreenState extends State<ColorfulScreen> {
         random.nextInt(256), random.nextInt(256), random.nextInt(256), 1.0);
   }
 
-  String generateTextEasyWay(int length) => randomString(stringLength);
+  String generateTextEasyWay(int length) => randomString(length);
 
   String generateText(int length) {
     String string = '';
